@@ -1,22 +1,24 @@
 package utils;
 
 import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer
 {
-public int intitalCount = 0;
+public int initalCount = 0;
 public int maxRetryCount = 2;
 
-@override
+@Override
     public boolean retry(ITestResult result)
 {
-    if(intitalCount < maxRetryCount)
+    if(initalCount < maxRetryCount)
     {
-        intitalCount++;
+        initalCount++;
         return true;
     }
+    return false;
 }
-return false;
+
 
 
 }
